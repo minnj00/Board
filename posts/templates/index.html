@@ -10,16 +10,16 @@
                 <th>상세보기 </th>
             </tr>
         </thead>
+            
+        <tbody>
             {%for post in posts%}
             <tr>
                 <td>
                     {{post.title}}
                 </td>
-                <td>링크</td>
+                <td><a href="{% url 'posts:detail' id=post.id %}">detail</a></td>
             </tr>
             {% endfor %}
-        <tbody>
-          
         </tbody>
       </table>
 {% endblock %}
