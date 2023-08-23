@@ -22,10 +22,10 @@ settings.py의 TEMPLATES에서 APP_DIRS 의 TRUE설정 때문에 app/templates �
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'posts:new' %}">create</a>
+              <a class="nav-link" href="">Features</a>
               <a class="nav-link" href="#">Pricing</a>
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              <a class="nav-link">Disabled</a>
             </div>
           </div>
         </div>

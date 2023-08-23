@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# 처음 기본으로 설정되어있는 admin 설정때문에 runserver 처음 시행시에
+# 18개가 migrate DB로 번역되어야 합니다. 이런식으로 뜨는 것. 
+# 만약 model 안의 이름이 무언가가 바뀌면 다시 번역 코드를 입력해야함.
 
 urlpatterns = [
     path('admin/', admin.site.urls),
