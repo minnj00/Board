@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<form action="" method="POST">
+<form action="{% url 'posts:create' %}" method="POST">
+    {% csrf_token %}
     <div class="mb-3">
       <label for="title" class="form-label">제목</label>
       <input type="text" class="form-control" id="title" name="title">
@@ -9,7 +10,7 @@
     <div class="mb-3">
       <label for="content" class="form-label">내용</label>
       <!-- <input type="password" class="form-control" id="content"> -->
-      <textarea class="form-control" name="" id="content" cols="30" rows="10" name="content"></textarea>
+      <textarea class="form-control" id="content" cols="30" rows="10" name="content"></textarea>
     </div>
    
     <button type="submit" class="btn btn-primary">Submit</button>
