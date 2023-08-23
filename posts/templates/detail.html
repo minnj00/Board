@@ -12,7 +12,15 @@
             <p>{{post.created_at}}</p>
             <a href="{% url 'posts:delete' id=post.id %}" class="btn btn-danger">delete</a>
             <a href="{% url 'posts:edit' id=post.id %}" class="btn btn-warning">edit</a>
+        <!-- 템플릿태그 안에 url 함수를 사용하는데 
+            문법상 url 과 arg 가 들어감 이때 id 부분은 argument
+            결국 저 태그가 'posts/__/' 을 return하는 것.
+            Ex) delete path 에서 int:id 자리에 id가 들어가고
+            결국 posts/id/delete 가 return 되는 것 
+            django 사이트 참조-->
+        
         </div>
+
 
     </div>
 

@@ -4,9 +4,13 @@
 <form action="{% url 'posts:create' %}" method="POST">
     {% csrf_token %}
     <div class="mb-3">
-      <label for="title" class="form-label">제목</label>
-      <input type="text" class="form-control" id="title" name="title">
+      <label for="title-id" class="form-label">제목</label>
+      <input type="text" class="form-control" id="title-id" name="title">
     </div>
+<!-- for 과 id은 label과 input을 연결해줌
+     그래서 for 과 id 뒤에 있는 값들이 일치해야함 
+     label의 for 에 해당하는 것을 찾아서  
+    input에 넣은 값들을 변수화를 해야하는데 그 때 name에 해당하는 이름을 붙여줌. -->
     <div class="mb-3">
       <label for="content" class="form-label">내용</label>
       <!-- <input type="password" class="form-control" id="content"> -->

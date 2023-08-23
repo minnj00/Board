@@ -1,5 +1,4 @@
-from django.shortcuts import render, redirect 
-from .models import Post
+
 
 # Create your views here.
 def index(request):
@@ -22,6 +21,7 @@ def new(request):
 
 def create(request):
     title=request.POST.get('title')
+    # new.html 에서 input 을 가져오기 위한 코드 
     content=request.POST.get('content')
 
     # post = Post()
